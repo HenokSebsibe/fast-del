@@ -1,0 +1,38 @@
+<Window x:Class="FoodyExpress.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FoodyExpress - Dashboard" Height="700" Width="1000"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar -->
+        <Border Grid.Column="0" Background="{StaticResource SurfaceColor}" BorderBrush="#E0E0E0" BorderThickness="0,0,1,0">
+            <StackPanel>
+                <TextBlock Text="FoodyExpress" FontSize="22" FontWeight="Bold" Foreground="{StaticResource PrimaryColor}" Margin="20,30,20,40" />
+                
+                <Button x:Name="btnAdminDashboard" Content="Admin Dashboard" Margin="10,5" Background="Transparent" Foreground="{StaticResource TextColor}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="NavButton_Click" />
+                <Button x:Name="btnUserManagement" Content="User Management" Margin="10,5" Background="Transparent" Foreground="{StaticResource TextColor}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="NavButton_Click" />
+                <Button x:Name="btnRestaurantManagement" Content="Restaurants" Margin="10,5" Background="Transparent" Foreground="{StaticResource TextColor}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="NavButton_Click" />
+                <Button x:Name="btnMenuItemManagement" Content="Menu Items" Margin="10,5" Background="Transparent" Foreground="{StaticResource TextColor}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="NavButton_Click" />
+                <Button x:Name="btnOrderManagement" Content="Manage Orders" Margin="10,5" Background="Transparent" Foreground="{StaticResource TextColor}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="NavButton_Click" />
+                
+                <Button x:Name="btnCustomerDashboard" Content="Dashboard" Margin="10,5" Background="Transparent" Foreground="{StaticResource TextColor}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="NavButton_Click" />
+                <Button x:Name="btnCustomerMenu" Content="Menu" Margin="10,5" Background="Transparent" Foreground="{StaticResource TextColor}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="NavButton_Click" />
+                <Button x:Name="btnOrders" Content="My Orders" Margin="10,5" Background="Transparent" Foreground="{StaticResource TextColor}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="NavButton_Click" />
+                
+                <Separator Margin="10,20" />
+                <TextBlock x:Name="txtUserInfo" Text="User: Admin" Margin="20,0" Foreground="{StaticResource TextColorLight}" FontSize="12" />
+                <Button Content="Logout" Margin="10,10" Background="Transparent" Foreground="Red" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="Logout_Click" />
+            </StackPanel>
+        </Border>
+
+        <!-- Main Content -->
+        <Border Grid.Column="1" Background="{StaticResource BackgroundColor}">
+            <ContentControl x:Name="MainContent" Margin="20" />
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,11 @@
+<Window x:Class="FoodyExpress.Views.AdminPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:pages="clr-namespace:FoodyExpress.Views.Pages"
+        Title="Admin Panel - User Management" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BackgroundColor}">
+    <Grid>
+        <pages:UserManagement />
+    </Grid>
+</Window>
